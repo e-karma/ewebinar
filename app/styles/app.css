@@ -1,0 +1,426 @@
+@lost gutter 5px;
+$black: #151515;
+
+body {
+  margin: 0;
+  padding:0;
+/*   lost-utility: edit; */
+}
+
+header {
+  height:50px;
+  ul {
+    margin:0;
+    li {
+      list-style-type:none;
+      display:inline-block;
+    }
+  }
+}
+
+aside {
+  width:15%;
+  float:left;
+  ul {
+    margin:0;
+    li {
+      list-style-type:none;
+    }
+  }
+
+}
+.main {
+  float:right;
+  width:80%;
+  height:100%;
+
+}
+
+main {
+  float:right;
+  width:100%;
+  height:auto;
+  background:purple;
+  h1{
+    text-align:center;
+    color:white;
+  }
+}
+
+img.me {
+  padding: 10px;
+  height: 50px;
+  width:50px;
+}
+
+header {
+  height: 75px;
+  width: 100%;
+  background:white;
+  margin-bottom: 5px;
+}
+
+footer{
+  background: white;
+  margin-top:5px;
+}
+button {
+  margin:5px;
+  width: 120px;
+  height:30px;
+  background-color:transparent;
+  border-radius: 0;
+  border: 1px solid #151515;
+  &:hover {
+    color: #97d700;
+    border: 1px solid #97d700;
+  }
+}
+
+section {
+  height:100%;
+  width:100%;
+
+}
+
+
+.third{
+  lost-column: 1/3 0;
+  height:220px;
+  text-align:center;
+  span{
+    color:$black;
+  }
+}
+.parent {
+height:100%;
+margin:0;
+}
+
+.child {
+  position:relative;
+  lost-waffle: 1/3;
+  height: 300px;
+}
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  background: $black!important;
+  opacity: .8!important;
+  width: 100%;
+  height: 100%;
+  z-index:1;
+  :hover {
+      opacity: .65;
+  }
+}
+.r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9 {
+  background-image: url(images/sprite.jpg);
+  background-repeat: no-repeat;
+  height:200px;
+}
+
+.r1 {
+  background-position: 0px 0px;
+}
+
+.r2 {
+  background-position: -600px 0px;
+}
+
+.r3 {
+  background-position: -1200px 0px;
+}
+.r4{
+  background-position: 0px -500px;
+}
+.r5{
+  background-position: -600px -500px;
+}
+.r6{
+  background-position: -1200px -500px;
+}
+.r7{
+  background-position: 0px -1000px;
+}
+.r8{
+  background-position: -600px -1000px;
+}
+.r9{
+  background-position: -1200px -1000px;
+}
+
+
+.left {
+  display:inline;
+  float:left;
+}
+.center {
+  padding-top: 15px;
+}
+.center a {
+  margin-left: 8%;
+  text-decoration: none;
+  display: inline;
+  font-size: 24px;
+  color: $black;
+  padding: 10px;
+  :hover {
+    background: blue;
+  }
+}
+/* */
+
+
+/* inner pages*/
+.content {
+   h1 {
+   color:white;
+   margin: 0;
+   padding: 0;
+ }
+}
+/* overlay text*/
+div {
+  h1 {
+    color: white;
+    font-weight: 300;
+    text-align:center;
+    padding-top: 15%;
+  }
+}
+div h1 {
+  padding-top: 0;
+  color: white;
+  text-align:center;
+  padding-top:10%;
+}
+
+
+/*
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////BEGIN LOST - GRID - CSS ///////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+/* Lost Column
+*/
+section .parent {
+  lost-utility: clearfix;
+}
+
+div .child {
+  lost-column: 1/3;
+  height:200px;
+  margin-bottom:5px;
+}
+
+
+/* LOST-WAFFLE
+Creates a block that is a fraction of the size of its
+containing element's width AND height with a gutter on the right and bottom.
+inputs: fraction | cycle | gutter | flex|no-flex
+*/
+.waffle-parent{
+  height: 100%;
+}
+.waffle-child{
+  lost-waffle: 1/3 3 20px;
+  height:100px;
+}
+
+
+/* LOST-ALIGN
+Align Nested Elements Apply lost-align to parent container*/
+
+/*reset|horizontal|vertical|top-left|top-center|top|top-right|middle-left|left
+|middle-center|center|middle-right|right|bottom-left|bottom-center|bottom|bottom-right*/
+.align {
+  lost-align:bottom-right;
+  width: 600px;
+  height: 400px;
+}
+.align-child {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+/* LOST-CENTER
+You can also make use of the lost-center property to assign a max-width and margin: auto to an
+element and center it on the page. clearfix will automatically be applied in this case.
+*/
+.center-parent {
+  lost-center: 900px;
+}
+.center-child-third{
+  lost-column: 1/3;
+  margin-bottom:5px;
+  height:200px;
+}
+.center-child-quarter{
+  lost-column: 1/4 0;
+  height:300px;
+}
+
+
+/* LOST-COLUMN
+Creates a column that is a fraction of the size of its containing element's width with a gutter.
+*/
+
+.column-child{
+  lost-column: 1/2;
+}
+
+
+
+/* LOST-FLEXBOX-GRIDS  All or nothing it appears
+ @lost flexbox flex;
+ */
+
+ .flexbox-grids-parent {
+  lost-center: 900px;
+}
+.flexbox-grids-child{
+  lost-column: 1/3;
+  margin-bottom:5px;
+  height:200px;
+}
+
+
+/* LOST-FLEX-CONTAINER  -  Creates a flexbox container
+- The flex-direction the container should create. This is typically opposite to the
+element you're creating so a row would need lost-flex-container: column;.
+inputs: row|column
+ */
+
+ .lost-flex-container-parent{
+   lost-flex-container: row;
+   lost-utility: edit;
+}
+ .lost-flex-child{
+   lost-column: 1/3 flex;
+   margin-bottom:5px;
+   height:200px;
+ }
+
+
+
+/* LOST-MOVE
+Source ordering. Shift elements left, right, up, or down, by their left or top position by
+passing a positive or negative fraction.
+inputs: fraction | row|column;should be opposite of col/row its used on  | gutter
+*/
+.move {
+  lost-column: 1/2;
+  background:blue;
+  height:100px;
+}
+.move:first-child {
+  lost-move: 1/2;
+}
+.move:last-child{
+  lost-move: -1/2;
+}
+
+/* LOST-CYCLE
+Use lost-utility: edit; on body to visualize the entire structure of your site,
+or just specify the areas you're working on. apply to parent
+*/
+.row {
+  lost-utility: clearfix;
+  height:300px;
+}
+
+.quarter {
+  lost-column: 1/4 0;
+  height:250px;
+}
+
+.half {
+  lost-column: 1/2 0;
+  height:280px;
+}
+
+.eighth {
+  lost-column: 1/8 0;
+  height:250px;
+}
+.third{
+  lost-column: 1/3 0;
+  height:220px;
+}
+
+/* LOST-OFFSET
+Margin to the left, right, bottom, or top, of an element depending on if the fraction passed
+is positive or negative. It works for both horizontal and vertical grids but not both.
+inputs: fraction | row|column | gutter
+*/
+.two-elements {
+  lost-column: 1/2 ;
+  height:200px;
+  width:200px;
+}
+
+.two-elements:first-child {
+  lost-offset: -1/2 row;
+}
+
+
+
+/* LOST-ROW
+Creates a row that is a fraction of the size of its containing element's height with a gutter.
+Apply height % to parent & lost-row: fraction to child
+Inputs: fraction | Gutter | Flex|no-flex
+*/
+.row-parent {
+  height:100%;
+}
+.row-child{
+  lost-row:1/2 50px;
+  p{
+    color:white;
+    font-size:24px;
+  }
+}
+
+
+/* LOST-MASONRY-ROW
+*/
+
+
+
+/* LOST-MASONRY-COLUMN
+*/
+
+
+
+
+/* LOST-NEST
+Nesting is simple and requires no extra context unlike other preprocessor grid systems.
+*/
+.nest-parent{
+  lost-column:1/2;
+  height:500px;
+  h1{
+    color:white;
+    text-align:center;
+  }
+}
+.child-nest-a{
+  lost-column:1/2;
+  color:white;
+}
+.child-nest-b{
+  width:100px;
+
+}
+.child-nest-c{
+  width:50px;
+}
