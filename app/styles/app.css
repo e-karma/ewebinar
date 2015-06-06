@@ -1,6 +1,6 @@
 @lost gutter 5px;
 @custom-media --small-mobile (max-width:500px);
-@custom-media --large-desktop (min-width:500px);
+@custom-media --large-desktop (min-width:1200px);
 
 $black: #151515;
 
@@ -474,10 +474,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 }
 @media (--large-desktop){
-  .test-box{
-    width:100px;
+  div .child {
+    lost-column: 1/4;
     height:200px;
-    background:green;
-/*     margin-left:600px;
- */  }
+    margin-bottom:5px;
+  }
 }
