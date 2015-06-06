@@ -140,7 +140,6 @@ margin:0;
   width: 100%;
   min-height: 200px;
   z-index:1;
-  margin-bottom:5px;
   :hover {
       opacity: .65;
   }
@@ -154,6 +153,7 @@ margin:0;
   background-image: url(images/sprite.jpg);
   background-repeat: no-repeat;
   height:200px;
+
 }
 
 .r1 {
@@ -186,8 +186,10 @@ margin:0;
   background-position: -1200px -1000px;
 }
 
-
-
+.r10{
+  background: $black;
+  height:200px;
+}
 
 .left {
   display:inline;
@@ -232,57 +234,6 @@ div {
   margin-top:5px;
   h2 {
     color:white;
-  }
-}
-
-.hero-container {
-  width:100%;
-  height:100px;
-  background:white;
-}
-
-
-@media (--small-mobile){
-  h1{
-    font-size:5.9vw;
-  }
-  .center {
-    visibility:hidden;
-  }
-  div .child {
-    lost-column: 1;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--small-tablet){
-  h1{
-    font-size:3.9vw;
-  }
-  .center {
-    visibility:hidden;
-  }
-  div .child {
-    lost-column: 1/2;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--medium-tablet){
-  div .child {
-    lost-column: 1/3;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--large-desktop){
-  h1{
-    font-size:2.4vw;
-  }
-  div .child {
-    lost-column: 1/4;
-    height:200px;
-    margin-bottom:5px;
   }
 }
 
@@ -505,4 +456,64 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 .child-nest-c{
   width:50px;
+}
+
+
+
+@media (--small-mobile){
+  h1{
+    font-size:5.9vw;
+  }
+  .center {
+    visibility:hidden;
+  }
+  div .child {
+    lost-column: 1;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--small-tablet){
+  h1{
+    font-size:3.9vw;
+  }
+  .center {
+    visibility:hidden;
+  }
+  div .child {
+    lost-column: 1/2;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--medium-tablet){
+  h1{
+    font-size:3.4vw;
+  }
+  div .child {
+    lost-column: 1/3;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--large-desktop){
+  h1{
+    font-size:2.4vw;
+  }
+  div .child {
+    lost-column: 1/4;
+    height:200px;
+    margin-bottom:5px;
+  }
+  div {
+    h1 {
+      color: white;
+      font-weight: 300;
+      text-align:center;
+      padding-top: 3%;
+    }
+  }
+  .overlay h2 {
+    padding-top:5%;
+  }
 }
