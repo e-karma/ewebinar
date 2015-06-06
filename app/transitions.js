@@ -93,6 +93,12 @@ export default function() {
     this.use('toLeft'),
     this.reverse('toRight')
   ),
+  this.transition(
+    this.fromRoute('roadmap'),
+    this.toRoute('next-steps'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
 
 
   /* Route 1 */
