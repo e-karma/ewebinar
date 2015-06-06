@@ -96,33 +96,22 @@ export default function() {
 
 
   /* Route 1 */
+
   this.transition(
     this.fromRoute('why'),
-    this.toRoute('platform'),
+    this.toRoute('why.unified-platform'),
     this.use('toLeft'),
     this.reverse('toRight')
   ),
   this.transition(
     this.fromRoute('why'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.toRoute('why.cutting-edge-features'),
+    this.use('fade'),
+    this.reverse('fade')
   ),
   this.transition(
     this.fromRoute('why'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('why'),
-    this.toRoute('roadmap'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('why'),
-    this.toRoute('store'),
+    this.toRoute('why.efficiency'),
     this.use('toLeft'),
     this.reverse('toRight')
   ),

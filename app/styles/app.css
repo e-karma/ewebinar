@@ -5,6 +5,7 @@
 @custom-media --large-desktop (min-width:1200px);
 
 $black: #151515;
+$green: #97d700;
 
 body {
   margin: 0;
@@ -23,9 +24,11 @@ h2 {
 }
 h3 {
   font-size: 2.1vw;
+  font-weight:300;
 }
 h4 {
   font-size: 1.8vw;
+  font-weight:250;
 }
 header {
   height:50px;
@@ -127,8 +130,8 @@ section {
   color: #151515;
 }
 .parent {
-height:100%;
-margin:0;
+  height:100%;
+  margin:0;
 }
 
 .child {
@@ -217,6 +220,7 @@ margin:0;
   background-image: url(images/sprite.jpg);
   background-repeat: no-repeat;
   height:100px;
+  margin-bottom:5px;
 }
 .r1-100 {
   background-position: 0px 0px;
@@ -289,7 +293,12 @@ div .child {
   lost-column: 1/3;
   height:200px;
   margin-bottom:5px;
-  background:white;
+  background:$black;
+  h3{
+    color:$green;
+    text-align:center;
+    padding-top:3%;
+  }
 }
 
 
@@ -324,27 +333,60 @@ Align Nested Elements Apply lost-align to parent container*/
   background:white;
 }
 
-
+.break-10{
+  height:10px;
+  width:100%;
+}
+.break-20{
+  height:20px;
+  width:100%;
+}
+.break-40{
+  height:40px;
+  width:100%;
+}
+.break-60{
+  height:60px;
+  width:100%;
+}
 
 
 /* LOST-CENTER
 You can also make use of the lost-center property to assign a max-width and margin: auto to an
 element and center it on the page. clearfix will automatically be applied in this case.
 */
-.center-parent {
+.center-parent-sm {
+  lost-center: 600px;
+}
+.center-parent-md {
   lost-center: 900px;
+}
+.center-parent-lg {
+  lost-center: 1200px;
+}
+.center-child-full{
+  width:100%;
+  margin-bottom:5px;
+  height:100px;
+  background:grey;
+}
+.center-child-half{
+  lost-column: 1/2;
+  margin-bottom:5px;
+  height:100px;
+  background:$black;
 }
 
 .center-child-third{
   lost-column: 1/3;
   margin-bottom:5px;
-  height:200px;
-  background:white;
+  height:100px;
+  background:$black;
 }
 .center-child-quarter{
   lost-column: 1/4 0;
   height:300px;
-  background:white;
+  background:$black;
 }
 
 
@@ -381,15 +423,15 @@ element you're creating so a row would need lost-flex-container: column;.
 inputs: row|column
  */
 
- .lost-flex-container-parent{
+ .flex-container-parent{
    lost-flex-container: row;
    lost-utility: edit;
 }
- .lost-flex-child{
+ .flex-container-child{
    lost-column: 1/3 flex;
    margin-bottom:5px;
    height:200px;
-   background:white;
+   background:blue;
  }
 
 
@@ -466,15 +508,21 @@ Creates a row that is a fraction of the size of its containing element's height 
 Apply height % to parent & lost-row: fraction to child
 Inputs: fraction | Gutter | Flex|no-flex
 */
-.vertical-parent, .row-parent {
+.vertical-parent {
   height:100%;
+
 }
-.vertical-child, .row-child{
-  lost-row:1/2 50px;
-  background:white;
-  margin:5px;
+.vertical-child {
+  lost-row: 1/2 20px;
+  background:$green;
+  margin:5px auto;
   p{
     font-size:24px;
+  }
+  h3{
+    color:white;
+    text-align:center;
+    padding-top: 2%;
   }
 }
 
@@ -510,9 +558,6 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 
 }
 
-.vertical-child {
-  background:white;
-}
 
 .hero-container .overlay {
   height:100px;
@@ -524,6 +569,17 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 @media (--small-mobile){
   h1{
     font-size:5.9vw;
+  }
+  h3 {
+    text-align:center;
+    color:white;
+    font-size:4.5vw;
+  }
+  h4{
+    padding-top:4%;
+    font-size:4vw;
+    text-align:center;
+    color:$green;
   }
   a {
     margin-bottom:5px;
@@ -544,6 +600,17 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h1{
     font-size:5.9vw;
   }
+  h3 {
+    text-align:center;
+    color:white;
+    font-size:5vw;
+  }
+  h4{
+    padding-top:3%;
+    font-size:4vw;
+    text-align:center;
+    color:$green;
+  }
   .center {
     visibility:hidden;
   }
@@ -560,6 +627,16 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h1{
     font-size:3.4vw;
   }
+  h3 {
+    text-align:center;
+    color:white;
+    font-size:3.2vw;
+  }
+  h4{
+    font-size:2.8vw;
+    text-align:center;
+    color:$green;
+  }
   div .child {
     lost-column: 1/3;
     height:200px;
@@ -572,6 +649,16 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 @media (--large-desktop){
   h1{
     font-size:2.4vw;
+  }
+  h3 {
+    text-align:center;
+    color:white;
+    font-size:2.2vw;
+  }
+  h4{
+    font-size:2vw;
+    text-align:center;
+    color:$green;
   }
   div .child {
     lost-column: 1/4;
