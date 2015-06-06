@@ -97,11 +97,12 @@ footer{
 
 button {
   margin:5px;
-  width: 120px;
-  height:30px;
+  width: 50%;
+  height:60px;
   background-color:transparent;
   border-radius: 0;
   border: 1px solid #151515;
+  font-size:120%;
   &:hover {
     color: #97d700;
     border: 1px solid #97d700;
@@ -347,7 +348,7 @@ Align Nested Elements Apply lost-align to parent container*/
   width:100%;
 }
 .break-60{
-  height:60px;
+  margin-top:60px;
   width:100%;
 }
 
@@ -469,7 +470,7 @@ or just specify the areas you're working on. apply to parent
   height:260px;
 }
 
-.full, .quarter, .half, .eighth, .third {
+.full, .quarter, .quarter-sm, .half, .eighth, .third, .three-quarter {
   background:$black;
 }
 
@@ -479,6 +480,14 @@ or just specify the areas you're working on. apply to parent
 }
 .quarter {
   lost-column: 1/4 0;
+  height:250px;
+}
+.quarter-sm {
+  lost-column: 1/4 0;
+  height:100px;
+}
+.three-quarter{
+  lost-column: 3/4 0;
   height:250px;
 }
 
@@ -578,12 +587,11 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 
 
+
 .hero-container .overlay {
   height:100px;
 }
-.overlay-2 {
-  height:100px;
-}
+
 
 @media (--small-mobile){
   h1{

@@ -94,6 +94,13 @@ export default function() {
     this.reverse('toRight')
   ),
   this.transition(
+    this.fromRoute('why'),
+    this.toRoute('platform'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+
+  this.transition(
     this.fromRoute('roadmap'),
     this.toRoute('next-steps'),
     this.use('toLeft'),
