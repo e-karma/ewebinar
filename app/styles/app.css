@@ -235,6 +235,9 @@ section {
 .center {
   padding-top: 15px;
 }
+.text-center{
+  text-align:center;
+}
 .center a {
   margin-left: 8%;
   text-decoration: none;
@@ -470,7 +473,7 @@ or just specify the areas you're working on. apply to parent
   height:260px;
 }
 
-.full, .quarter, .quarter-sm, .half, .eighth, .third, .three-quarter {
+.full, .quarter, .quarter-sm, .half, .eighth, .third {
   background:$black;
 }
 
@@ -586,11 +589,16 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 
 }
 
-
-
 .hero-container .overlay {
   height:100px;
 }
+
+.white{
+  color:white;
+}
+
+
+
 
 
 @media (--small-mobile){
@@ -611,9 +619,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   a {
     margin-bottom:5px;
   }
-  .center {
-    visibility:hidden;
-  }
+
   div .child {
     lost-column: 1;
     height:200px;
@@ -621,6 +627,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   .overlay h2 {
     padding-top:5%;
     font-size:4vw;
+  }
+  .ul3,.ul4, .ul5 {
+    visibility:hidden;
   }
 }
 @media (--small-tablet){
@@ -638,9 +647,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     text-align:center;
     color:$green;
   }
-  .center {
-    visibility:hidden;
-  }
+
   div .child {
     lost-column: 1/2;
     height:200px;
@@ -648,6 +655,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   .overlay h2 {
     padding-top:5%;
     font-size:4vw;
+  }
+  .ul4, .ul5 {
+    visibility:hidden;
   }
 }
 @media (--medium-tablet){
@@ -672,6 +682,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   .overlay h2 {
     padding-top:1.2%;
   }
+  .ul5 {
+    visibility:hidden;
+  }
 }
 @media (--large-desktop){
   h1{
@@ -684,7 +697,6 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
   h4{
     font-size:2vw;
-    text-align:center;
     color:$green;
   }
   div .child {
@@ -692,14 +704,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     height:200px;
     margin-bottom:5px;
   }
-  div {
-    h1 {
-      color: white;
-      font-weight: 300;
-      text-align:center;
-      padding-top: 3%;
-    }
-  }
+
   .overlay h2 {
     padding-top:0;
   }
