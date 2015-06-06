@@ -1,5 +1,5 @@
 export default function() {
-  var duration = 500;
+  // var duration = 500;
   /* application */
   this.transition(
     this.fromRoute('application'),
@@ -7,12 +7,7 @@ export default function() {
     this.use('explode'),
     this.reverse('fade')
   );
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('index'),
-    this.use('fade'),
-    this.reverse('fade')
-  ),
+
   this.transition(
     this.fromRoute('index'),
     this.toRoute('why'),
@@ -144,34 +139,86 @@ export default function() {
   ),
   /* Route 4 */
   this.transition(
-    this.fromRoute('store'),
+    this.fromRoute('platform'),
     this.toRoute('application'),
     this.use('toLeft'),
     this.reverse('toRight')
   ),
   this.transition(
-    this.fromRoute('store'),
-    this.toRoute('features'),
+    this.fromRoute('platform'),
+    this.toRoute('platform.dashboard'),
+    this.use('toUp'),
+    this.reverse('toDown')
+  ),
+  this.transition(
+    this.fromRoute('platform.dashboard'),
+    this.toRoute('platform.estore'),
     this.use('toLeft'),
     this.reverse('toRight')
   ),
   this.transition(
-    this.fromRoute('store'),
-    this.toRoute('features'),
+    this.fromRoute('platform.estore'),
+    this.toRoute('platform.email'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.email'),
+    this.toRoute('platform.crm'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.crm'),
+    this.toRoute('platform.profile'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  ),
+
+  /* Route 4 */
+  this.transition(
+    this.fromRoute('platform.profile'),
+    this.toRoute('platform.content-curation'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.content-curation'),
+    this.toRoute('platform.blog'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.blog'),
+    this.toRoute('platform.calendar-events'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.calendar-events'),
+    this.toRoute('platform.todos'),
+    this.use('toRight'),
+    this.reverse('toLeft')
+  ),
+  this.transition(
+    this.fromRoute('platform.todos'),
+    this.toRoute('platform.builder'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.builder'),
+    this.toRoute('platform.analytics'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  ),
+  this.transition(
+    this.fromRoute('platform.analytics'),
+    this.toRoute('platform.messenger'),
     this.use('toLeft'),
     this.reverse('toRight')
   ),
 
-  /* Route 5 */
-
-
-  this.transition(
-    this.fromRoute('features'),
-    this.toRoute('custom-services'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  /* Route 6 */
 
 
   this.transition(
@@ -179,80 +226,31 @@ export default function() {
     this.toRoute('custom-services.design'),
     this.use('toLeft'),
     this.reverse('toRight')
-  );
-  /* Route 7 */
-  this.transition(
-    this.fromRoute('gallery'),
-    this.toRoute('why'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('gallery'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('gallery'),
-    this.toRoute('roadmap'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('gallery'),
-    this.toRoute('store'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  /* Route 8 */
-  this.transition(
-    this.fromRoute('features'),
-    this.toRoute('why'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('features'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('features'),
-    this.toRoute('roadmap'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
-  this.transition(
-    this.fromRoute('features'),
-    this.toRoute('store'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  );
+  ),
+
   /* Route 9 */
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('why'),
     this.use('toLeft'),
     this.reverse('toRight')
-  );
+  ),
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('platform'),
     this.use('toLeft'),
     this.reverse('toRight')
-  );
+  ),
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('roadmap'),
     this.use('toLeft'),
     this.reverse('toRight')
-  );
+  ),
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('store'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
-}
+  }
