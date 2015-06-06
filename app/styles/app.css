@@ -15,17 +15,17 @@ h1,h2,h3,h4,h5, a, p, span {
   font-family: 'Lato', sans-serif;
 }
 h1 {
-  font-size: 2.9vw;
+  font-size: 2.9vw
 }
-h2{
-  font-size:2.4vw;
-  color:black;
+h2 {
+  font-size: 2.4vw;
+  color: $black;
 }
-h3{
-  font-size:2.1vw;
+h3 {
+  font-size: 2.1vw;
 }
-h4{
-  font-size:1.8vw;
+h4 {
+  font-size: 1.8vw;
 }
 header {
   height:50px;
@@ -235,11 +235,59 @@ div {
   }
 }
 
-.hero {
+.hero-container {
   width:100%;
   height:100px;
   background:white;
 }
+
+
+@media (--small-mobile){
+  h1{
+    font-size:5.9vw;
+  }
+  .center {
+    visibility:hidden;
+  }
+  div .child {
+    lost-column: 1;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--small-tablet){
+  h1{
+    font-size:3.9vw;
+  }
+  .center {
+    visibility:hidden;
+  }
+  div .child {
+    lost-column: 1/2;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--medium-tablet){
+  div .child {
+    lost-column: 1/3;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--large-desktop){
+  h1{
+    font-size:2.4vw;
+  }
+  div .child {
+    lost-column: 1/4;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+
+
+
 /*
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
@@ -432,18 +480,10 @@ Inputs: fraction | Gutter | Flex|no-flex
   }
 }
 
-
 /* LOST-MASONRY-ROW
 */
-
-
-
 /* LOST-MASONRY-COLUMN
 */
-
-
-
-
 /* LOST-NEST
 Nesting is simple and requires no extra context unlike other preprocessor grid systems.
 */
@@ -465,41 +505,4 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 .child-nest-c{
   width:50px;
-}
-
-
-
-@media (--small-mobile){
-  .center {
-    visibility:hidden;
-  }
-  div .child {
-    lost-column: 1/2;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--small-tablet){
-  .center {
-    visibility:hidden;
-  }
-  div .child {
-    lost-column: 1/3;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--medium-tablet){
-  div .child {
-    lost-column: 1/4;
-    height:200px;
-    margin-bottom:5px;
-  }
-}
-@media (--large-desktop){
-  div .child {
-    lost-column: 1/5;
-    height:200px;
-    margin-bottom:5px;
-  }
 }
