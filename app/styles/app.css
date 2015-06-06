@@ -229,6 +229,7 @@ div {
 }
 
 .liquid-container {
+  margin-top:5px;
   h2 {
     color:white;
   }
@@ -469,6 +470,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 
 
 @media (--small-mobile){
+  .center {
+    visibility:hidden;
+  }
   div .child {
     lost-column: 1/2;
     height:200px;
@@ -476,6 +480,9 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 }
 @media (--small-tablet){
+  .center {
+    visibility:hidden;
+  }
   div .child {
     lost-column: 1/3;
     height:200px;
