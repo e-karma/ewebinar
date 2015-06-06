@@ -1,0 +1,8 @@
+{
+  "name": "ewebinar",
+  "root": "./dist",
+  "routes": {
+    "/**": "index.html"
+  },
+  "prerender": true
+}

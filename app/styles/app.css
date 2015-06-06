@@ -464,14 +464,17 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h1{
     font-size:5.9vw;
   }
+  a {
+    margin-bottom:5px;
+  }
   .center {
     visibility:hidden;
   }
   div .child {
     lost-column: 1;
     height:200px;
-    margin-bottom:5px;
   }
+
 }
 @media (--small-tablet){
   h1{
@@ -483,7 +486,6 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   div .child {
     lost-column: 1/2;
     height:200px;
-    margin-bottom:5px;
   }
 }
 @media (--medium-tablet){
