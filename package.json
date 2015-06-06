@@ -36,6 +36,7 @@
     "ember-export-application-global": "^1.0.2",
     "liquid-fire": "0.20.2",
     "lost": "^6.3.0",
+    "postcss-custom-media": "^3.0.0",
     "postcss-mixins": "^0.3.0",
     "postcss-nested": "^0.3.2",
     "postcss-simple-vars": "^0.3.0"

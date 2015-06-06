@@ -7,6 +7,8 @@ var lost = require('lost');
 var mixins = require('postcss-mixins');
 var nested = require('postcss-nested');
 var simpleVars = require('postcss-simple-vars');
+var customMedia = require("postcss-custom-media")
+
 
 var app = new EmberApp({
   postcssOptions: {
@@ -28,6 +30,9 @@ var app = new EmberApp({
       },
       {
         module:simpleVars
+      },
+      {
+        module:customMedia
       }
     ]
   }
