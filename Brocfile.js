@@ -7,7 +7,9 @@ var lost = require('lost');
 var mixins = require('postcss-mixins');
 var nested = require('postcss-nested');
 var simpleVars = require('postcss-simple-vars');
-var customMedia = require("postcss-custom-media")
+var customMedia = require("postcss-custom-media");
+var cssnext = require('broccoli-cssnext');
+
 
 
 var app = new EmberApp({

@@ -1,7 +1,6 @@
 @lost gutter 5px;
-@custom-media --small-mobile (max-width:300px);
-@custom-media --medium-tablet (device-width > 300px);
-@custom-media --large-desktop (min-width:800px);
+@custom-media --small-mobile (max-width:500px);
+@custom-media --large-desktop (min-width:500px);
 
 $black: #151515;
 
@@ -186,30 +185,7 @@ margin:0;
 }
 
 
-@media (--small-mobile){
-  .test-box{
-    width:100px;
-    height:200px;
-    background:blue;
-/*     margin-left:600px;
- */  }
-}
-@media (--medium-tablet){
-  .test-box{
-    width:100px;
-    height:200px;
-    background:green;
-/*     margin-left:600px;
- */  }
-}
-@media (--large-desktop){
-  .test-box {
-    width:100px;
-    height:200px;
-    background:red;
-/*     margin-left:600px;
- */  }
-}
+
 
 .left {
   display:inline;
@@ -486,4 +462,22 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 .child-nest-c{
   width:50px;
+}
+
+
+
+@media (--small-mobile){
+  div .child {
+    lost-column: 1/2;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--large-desktop){
+  .test-box{
+    width:100px;
+    height:200px;
+    background:green;
+/*     margin-left:600px;
+ */  }
 }
