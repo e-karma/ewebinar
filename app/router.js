@@ -120,19 +120,19 @@ Router.map(function() {
     this.route('templates')
     this.route('plugins');
   });
-// this.route('lost-grid', function() {
-//   this.route('waffle');
-//   this.route('align');
-//   this.route('center');
-//   this.route('column');
-//   this.route('cycle');
-//   this.route('flex-container');
-//   this.route('move');
-//   this.route('offset');
-//   this.route('row');
-//   this.route('nest');
-//   this.route('vertical');
-// });
+  this.route('lost-grid', function() {
+    this.route('waffle');
+    this.route('align');
+    this.route('center');
+    this.route('column');
+    this.route('cycle');
+    this.route('flex-container');
+    this.route('move');
+    this.route('offset');
+    this.route('row');
+    this.route('nest');
+    this.route('vertical');
+  });
 });
 
 export default Router;
