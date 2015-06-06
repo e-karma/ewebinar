@@ -1,5 +1,7 @@
 @lost gutter 5px;
 @custom-media --small-mobile (max-width:500px);
+@custom-media --small-tablet (min-width:500px) and (max-width:800px);
+@custom-media --medium-tablet (min-width:800px) and (max-width:1200px);
 @custom-media --large-desktop (min-width:1200px);
 
 $black: #151515;
@@ -473,9 +475,23 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     margin-bottom:5px;
   }
 }
-@media (--large-desktop){
+@media (--small-tablet){
+  div .child {
+    lost-column: 1/3;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--medium-tablet){
   div .child {
     lost-column: 1/4;
+    height:200px;
+    margin-bottom:5px;
+  }
+}
+@media (--large-desktop){
+  div .child {
+    lost-column: 1/5;
     height:200px;
     margin-bottom:5px;
   }
