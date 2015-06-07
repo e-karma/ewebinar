@@ -147,6 +147,9 @@ section {
 }
 .full-page {
   width:100%;
+  min-height:100px;
+  margin-bottom:5px;
+  opacity:.9;
 }
 .black {
   text-align:center;
@@ -160,7 +163,8 @@ section {
 .child {
   position:relative;
   lost-waffle: 1/3;
-  height: 300px;
+  height: 400px;
+  margin-bottom:5px;
   box-shadow: 0px 8px 17px rgba(0,0,0,.2);
 }
 .child-cal {
@@ -168,6 +172,24 @@ section {
   lost-waffle: 1/7;
   height: 100px;
   box-shadow: 0px 8px 17px rgba(0,0,0,.2);
+}
+.header-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  background: $black!important;
+  opacity: .8!important;
+  width: 100%;
+  min-height: 300px;
+  z-index:1;
+  :hover {
+      opacity: .65;
+  }
+  h2{
+    color:white;
+    text-align:center;
+    padding-top:15%;
+  }
 }
 .overlay {
   position:absolute;
@@ -185,6 +207,24 @@ section {
     color:white;
     text-align:center;
     padding-top:15%;
+  }
+}
+.layer-2-overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  background: $green!important;
+/*   opacity: .8!important;
+ */  width: 100%;
+  min-height: 100px;
+  z-index:1;
+  :hover {
+      opacity: .65;
+  }
+  h2{
+    color:white;
+    text-align:center;
+  /*   padding-top:8%; */
   }
 }
 .100-overlay {
@@ -240,6 +280,100 @@ section {
 .r9{
   background-position: -1200px -1000px;
 }
+
+.sm1, .sm2, .sm3, .sm4, .sm5, .sm6, .sm7, .sm8, .sm9 {
+  background-image: url(images/eweb-sm-sprite.jpg);
+  background-repeat: no-repeat;
+  height:200px;
+}
+
+.sm1 {
+  background-position: 0px 0px;
+}
+
+.sm2 {
+  background-position: -600px 0px;
+}
+
+.sm3 {
+  background-position: -1200px 0px;
+}
+.sm4{
+  background-position: 0px -500px;
+}
+.sm5{
+  background-position: -600px -500px;
+}
+.sm6{
+  background-position: -1200px -500px;
+}
+.sm7{
+  background-position: 0px -1000px;
+}
+.sm8{
+  background-position: -600px -1000px;
+}
+.sm9{
+  background-position: -1200px -1000px;
+}
+
+
+.bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7, .bg8, .bg9, .bgmtn {
+  background-image: url(images/eweb-sm-sprite.jpg);
+  background-repeat: no-repeat;
+  height:300px;
+  width:100%;
+}
+
+.dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog1, .blog2, .blog3, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3  {
+  background-image: url(images/eweb-sm-sprite.jpg);
+  background-repeat: no-repeat;
+  height:200px;
+  width:100%;
+}
+.dash1{
+  background-position: -80px -5560px;
+}
+
+.dash2{
+  background-position: -80px -6495px;
+}
+.dash3{
+  background-position: -1510px -19780px;
+}
+
+
+
+.bg1 {
+  background-position: 0px -12700px;
+}
+.bgmtn {
+  background-position: 0px -4000px;
+}
+
+.bg2 {
+  background-position: 20px -11350px;
+}
+
+.bg3 {
+  background-position: -200px -7500px;
+}
+.bg4{
+  background-position: -90px -3090px;
+}
+.bg5{
+  background-position: 0px -18500px;
+}
+.bg6{
+  background-position: -180px -10790px;
+}
+.bg7{
+  background-position: 0px -11000px;
+}
+.bg8{
+  background-position: 0px -12000px;
+}
+
 #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10 {
   background-image: url(images/estore-sprite.jpg);
   background-repeat: no-repeat;
@@ -412,9 +546,9 @@ div .child {
   margin-bottom:5px;
 /*   background:$green; */
   h3{
-    color:$black;
+    color:white;
     text-align:center;
-    padding-top:3%;
+    padding-top:15%;
   }
 }
 
@@ -686,7 +820,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 */
 .nest-full{
   lost-column: 1 20px;
-  height:400px;
+  height:300px;
 }
 .nest-parent{
   lost-column:1/2;
@@ -725,12 +859,17 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 .white{
   color:white;
 }
+#green {
+  color:$green;
+}
 .whitebg{
   background:#fff!important;
 }
 
 
-
+a {
+  margin:5px auto;
+}
 
 @media (--sm-mobile){
   h1{
@@ -747,9 +886,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     text-align:center;
     color:$green;
   }
-  a {
-    margin-bottom:5px;
-  }
+
 
   div .child {
     lost-column: 1;
@@ -866,11 +1003,11 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h4{
     font-size:2vw;
     color:$green;
-    text-align: center;
+/*     text-align: center; */
 
   }
   div .child {
-    lost-column: 1/5;
+    lost-column: 1/4;
     height:200px;
     margin-bottom:5px;
   }
@@ -894,7 +1031,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     text-align: center;
   }
   div .child {
-    lost-column: 1/6;
+    lost-column: 1/4;
     height:200px;
     margin-bottom:5px;
   }
