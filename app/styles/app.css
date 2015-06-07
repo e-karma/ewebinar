@@ -3,8 +3,8 @@
 @custom-media --lg-mobile (min-width:480px) and (max-width:800px);
 @custom-media --sm-tablet (min-width:800px) and (max-width:1000px);
 @custom-media --lg-tablet (min-width:1000px) and (max-width:1300px);
-@custom-media --sm-desktop (min-width:1300px) and (max-width:1800px);
-@custom-media --lg-desktop (min-width:1800px);
+@custom-media --sm-desktop (min-width:1300px) and (max-width:2200px);
+@custom-media --lg-desktop (min-width:2200px);
 
 $black: #151515;
 $green: #97d700;
@@ -15,7 +15,7 @@ body {
   min-height:1000px;
 /*   lost-utility: edit; */
 }
-h1,h2,h3,h4,h5, a, p, span {
+h1,h2,h3,h4,h5,h6 a, p, span {
   font-family: 'Lato', sans-serif;
 }
 h1 {
@@ -33,6 +33,17 @@ h4 {
 }
 h5 {
   font-size: 1.5vw;
+}
+h6 {
+  font-size: 1.5vw;
+  font-weight:bold;
+  margin:1em;
+  border-bottom:2px solid #555;
+  width:.8vw;
+}
+
+a {
+  text-decoration: none;
 }
 
   ul {
@@ -106,7 +117,7 @@ footer{
 }
 
 button {
-  margin:5px;
+  margin:5% auto;
   width: 50%;
   height:60px;
   background-color:transparent;
@@ -152,6 +163,12 @@ section {
   height: 300px;
   box-shadow: 0px 8px 17px rgba(0,0,0,.2);
 }
+.child-cal {
+  position:relative;
+  lost-waffle: 1/7;
+  height: 100px;
+  box-shadow: 0px 8px 17px rgba(0,0,0,.2);
+}
 .overlay {
   position:absolute;
   top:0;
@@ -177,7 +194,7 @@ section {
   background: $black!important;
   opacity: .8!important;
   width: 100%;
-  min-height: 200px;
+  min-height: 100px;
   z-index:1;
   :hover {
       opacity: .65;
@@ -270,6 +287,15 @@ section {
   z-index:-1;
 }
 
+.hamburger {
+  float:right;
+  margin:1.2em;
+}
+.stroke {
+  border-bottom:3px solid #151515;
+  width:30px;
+  margin: 5px auto;
+}
 
 .r1-100, .r2-100, .r3-100, .r4-100{
   background-image: url(images/sprite.jpg);
@@ -280,7 +306,12 @@ section {
 .r1-100 {
   background-position: 0px 0px;
 }
-
+.100-overlay{
+  background:#151515;
+  opacity:.8;
+  height:100px;
+  width:100%;
+}
 .left {
   position:relative;
   float:left;
@@ -342,6 +373,13 @@ div {
   margin-top:5px;
   h2 {
     color:white;
+    text-align:center;
+    text-decoration: none;
+  }
+  h3 {
+    color:$black;
+    text-align:center;
+    text-decoration: none;
   }
 }
 
@@ -452,15 +490,23 @@ element and center it on the page. clearfix will automatically be applied in thi
   width:100%;
   margin-bottom:5px;
   height:100px;
-  background:$black;
+  background:white;
 }
 .center-child-half{
   lost-column: 1/2;
   margin-bottom:5px;
   height:100px;
-  background:$black;
-}
+  background:white;
+  box-shadow: 0px 8px 17px rgba(0,0,0,.2);
 
+}
+.title{
+  background:#151515;
+  opacity:.8;
+  h3{
+    color: white;
+  }
+}
 .center-child-third{
   lost-column: 1/3;
   margin-bottom:5px;
@@ -709,6 +755,11 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     lost-column: 1;
     height:200px;
   }
+  .child-cal{
+    lost-column:1/3;
+    height:100px;
+  }
+
   .overlay h2 {
     padding-top:5%;
     font-size:4vw;
@@ -728,14 +779,19 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
   h4{
     font-size:2.8vw;
-    text-align:center;
     color:$green;
+    text-align:center;
   }
   div .child {
     lost-column: 1/2;
     height:200px;
     margin-bottom:5px;
   }
+  .child-cal{
+    lost-column:1/5;
+    height:100px;
+  }
+
   .overlay h2 {
     padding-top:1.2%;
   }
@@ -753,8 +809,8 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     font-size:2.4vw;
   }
   h4{
+    text-align: center;
     font-size:2.2vw;
-    text-align:center;
     color:$green;
   }
   div .child {
@@ -762,6 +818,11 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
     height:200px;
     margin-bottom:5px;
   }
+  .child-cal{
+    lost-column:1/5;
+    height:100px;
+  }
+
   .overlay h2 {
     padding-top:1.2%;
   }
@@ -781,6 +842,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h4{
     font-size:2vw;
     color:$green;
+
   }
   div .child {
     lost-column: 1/4;
@@ -789,21 +851,23 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 
   .overlay h2 {
-    padding-top:0;
+    padding-top:1.2%;
   }
 }
 @media (--sm-desktop){
   h1{
-    font-size:2vw;
+    font-size:2.4vw;
   }
   h3 {
     text-align:center;
     color:white;
-    font-size:1.6vw;
+    font-size:2.2vw;
   }
   h4{
-    font-size:1.4vw;
+    font-size:2vw;
     color:$green;
+    text-align: center;
+
   }
   div .child {
     lost-column: 1/5;
@@ -812,7 +876,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 
   .overlay h2 {
-    padding-top:0;
+    padding-top:1.2%;
   }
 }
 @media (--lg-desktop){
@@ -827,6 +891,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   h4{
     font-size:1.6vw;
     color:$green;
+    text-align: center;
   }
   div .child {
     lost-column: 1/6;
@@ -835,7 +900,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 
   .overlay h2 {
-    padding-top:0;
+    padding-top:1.2%;
   }
 }
 .slideUp{

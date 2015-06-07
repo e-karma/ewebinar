@@ -201,6 +201,22 @@ export default function() {
       use: ['toRight', { duration } ]
     })
   );
+  this.transition(
+    this.fromRoute('index'),
+    this.toRoute('store'),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
   // this.transition(
   //   this.fromRoute('index'),
   //   this.toRoute('next-steps'),
