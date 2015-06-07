@@ -1,6 +1,6 @@
 @lost gutter 5px;
-@custom-media --sm-mobile (min-width:320px) and (max-width:400px);
-@custom-media --lg-mobile (min-width:400px) and (max-width:800px);
+@custom-media --sm-mobile (min-width:320px) and (max-width:480px);
+@custom-media --lg-mobile (min-width:480px) and (max-width:800px);
 @custom-media --sm-tablet (min-width:800px) and (max-width:1000px);
 @custom-media --lg-tablet (min-width:1000px) and (max-width:1300px);
 @custom-media --sm-desktop (min-width:1300px) and (max-width:1800px);
@@ -50,13 +50,13 @@ h5 {
 aside {
   width:15%;
   float:left;
+  visibility:invisible;
   ul {
     margin:0;
     li {
       list-style-type:none;
     }
   }
-
 }
 
 .main {
@@ -159,7 +159,7 @@ section {
   background: $black!important;
   opacity: .8!important;
   width: 100%;
-  min-height: 100px;
+  min-height: 200px;
   z-index:1;
   :hover {
       opacity: .65;
@@ -371,7 +371,7 @@ div .child {
   margin-bottom:5px;
 /*   background:$green; */
   h3{
-    color:white;
+    color:$black;
     text-align:center;
     padding-top:3%;
   }
@@ -703,7 +703,7 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   }
 
   div .child {
-    lost-column: 1 0;
+    lost-column: 1;
     height:200px;
   }
   .overlay h2 {
@@ -742,15 +742,15 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 @media (--sm-tablet){
   h1{
-    font-size:3.4vw;
+    font-size:3vw;
   }
   h3 {
     text-align:center;
     color:white;
-    font-size:3.2vw;
+    font-size:2.4vw;
   }
   h4{
-    font-size:2.8vw;
+    font-size:2.2vw;
     text-align:center;
     color:$green;
   }
@@ -791,15 +791,15 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 @media (--sm-desktop){
   h1{
-    font-size:2.4vw;
+    font-size:2vw;
   }
   h3 {
     text-align:center;
     color:white;
-    font-size:2.2vw;
+    font-size:1.6vw;
   }
   h4{
-    font-size:2vw;
+    font-size:1.4vw;
     color:$green;
   }
   div .child {
@@ -814,15 +814,15 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
 }
 @media (--lg-desktop){
   h1{
-    font-size:2.4vw;
+    font-size:2.1vw;
   }
   h3 {
     text-align:center;
     color:white;
-    font-size:2.2vw;
+    font-size:1.8vw;
   }
   h4{
-    font-size:2vw;
+    font-size:1.6vw;
     color:$green;
   }
   div .child {
