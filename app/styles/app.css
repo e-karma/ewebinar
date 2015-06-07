@@ -325,7 +325,7 @@ section {
   width:100%;
 }
 
-.dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog1, .blog2, .blog3, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3  {
+.dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog-sm, .blog-lg, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3, .analytics1, .builder1, .msg1, .msg2, .content1, .event1, .profile-sm, .profile-lg  {
   background-image: url(images/eweb-sm-sprite.jpg);
   background-repeat: no-repeat;
   height:200px;
@@ -342,6 +342,54 @@ section {
   background-position: -1510px -19780px;
 }
 
+.email1{
+  background-position: -720px -6500px;
+}
+.profile-sm{
+  background-position: 0px -20050px;
+}
+.profile-lg{
+  background-position: 0px -20200px;
+}
+.blog-sm{
+  background-position: -670px -8760px;
+}
+.blog-lg{
+  background-position: 0px -20300px;
+}
+
+.cal1{
+  background-position: -1600px -19900px;
+}
+.todo1{
+  background-position: -1630px -20200px;
+}
+/* .todo2{
+  background-position: -1680px -20200px;
+}
+.todo3{
+  background-position: -1680px -20200px;
+} */
+.builder1{
+  background-position: -360px -19900px;
+}
+
+.analytics1{
+  background-position: -940px -19930px;
+}
+.msg1{
+  background-position: -1660px -19530px;
+}
+.content1{
+  background-position: 0px -19460px;
+}
+
+.eweb-logo-big{
+  background-position: -380px -19380px;
+}
+.event1{
+  background-position: -1600px -26000px;
+}
 
 
 .bg1 {
@@ -390,7 +438,7 @@ section {
 }
 
 #s2 {
-  background-position: -300px 0px;
+  background-position: -300px 15px;
 }
 
 #s3 {
