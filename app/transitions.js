@@ -1,5 +1,44 @@
 export default function() {
-  // var duration = 500;
+  var duration = 400;
+
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('intro'),
+  //   this.use('explode', {
+  //     matchBy: 'data-logo-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toLeft', { duration } ]
+  //   }),
+  //   this.reverse('explode', {
+  //     matchBy: 'data-logo-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toRight', { duration } ]
+  //   })
+  // );
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('lost-grid'),
+  //   this.use('explode', {
+  //     matchBy: 'data-logo-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toLeft', { duration } ]
+  //   }),
+  //   this.reverse('explode', {
+  //     matchBy: 'data-logo-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toRight', { duration } ]
+  //   })
+  // );
+
+
+
+
+
+
   /* application */
   this.transition(
     this.fromRoute('application'),
@@ -8,100 +47,201 @@ export default function() {
     this.reverse('fade')
   );
 
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('why'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('platform'),
-    this.use('toUp'),
-    this.reverse('toDown')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('roadmap'),
-    this.use('toRight'),
-    this.reverse('toLeft')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('store'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('features'),
-    this.use('fade'),
-    this.reverse('fade')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('custom-services'),
-    this.use('toRight'),
-    this.reverse('toLeft')
-  ),
+  //   this.transition(
+  //     this.fromRoute('index'),
+  //     this.toRoute('why'),
+  //     this.use('toLeft'),
+  //     this.reverse('toRight')
+  //   ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('why'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('platform'),
+  //   this.use('toUp'),
+  //   this.reverse('toDown')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('roadmap'),
+  //   this.use('toRight'),
+  //   this.reverse('toLeft')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('store'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('features'),
+  //   this.use('fade'),
+  //   this.reverse('fade')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('custom-services'),
+  //   this.use('toRight'),
+  //   this.reverse('toLeft')
+  // ),
   this.transition(
     this.fromRoute('index'),
     this.toRoute('gallery'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('features'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  ),
-  this.transition(
-    this.fromRoute('index'),
-    this.toRoute('next-steps'),
-    this.use('toDown'),
-    this.reverse('toUp')
-  ),
-  /* index */
-
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
   this.transition(
     this.fromRoute('index'),
     this.toRoute('why'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
+    this.toRoute('custom-services'),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
+  this.transition(
+    this.fromRoute('index'),
+    this.toRoute('profile'),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
   this.transition(
     this.fromRoute('index'),
     this.toRoute('roadmap'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
   this.transition(
     this.fromRoute('index'),
-    this.toRoute('store'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-  this.transition(
-    this.fromRoute('why'),
-    this.toRoute('platform'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-
-  this.transition(
-    this.fromRoute('roadmap'),
     this.toRoute('next-steps'),
-    this.use('toLeft'),
-    this.reverse('toRight')
-  ),
-
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
+  this.transition(
+    this.fromRoute('index'),
+    this.toRoute('platform'),
+    this.use('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toLeft', { duration } ]
+    }),
+    this.reverse('explode', {
+      matchBy: 'data-logo-id',
+      use: ['flyTo', { duration } ]
+    }, {
+      use: ['toRight', { duration } ]
+    })
+  );
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('next-steps'),
+  //   this.use('toDown'),
+  //   this.reverse('toUp')
+  // ),
+  // /* index */
+  //
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('platform'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('roadmap'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  //
+  // this.transition(
+  //   this.fromRoute('index'),
+  //   this.toRoute('store'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  // this.transition(
+  //   this.fromRoute('why'),
+  //   this.toRoute('platform'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  //
+  // this.transition(
+  //   this.fromRoute('roadmap'),
+  //   this.toRoute('next-steps'),
+  //   this.use('toLeft'),
+  //   this.reverse('toRight')
+  // ),
+  //
 
   /* Route 1 */
 
@@ -253,4 +393,38 @@ export default function() {
     this.use('toLeft'),
     this.reverse('toRight')
   );
+  // //example
+  // this.transition(
+  //   this.hasClass('band-description'),
+  //   this.toValue(true),
+  //   this.use('fade', { duration: 500 })
+  // );
+  // this.transition(
+  //  this.childOf('.speaker-icons'),
+  //  this.use('explode', {
+  //    matchBy: 'data-speaker-id',
+  //    use: ['flyTo', { duration, easing: [250, 15] } ]
+  //  })
+  // );
+
+  //The DOPENESS ANIMATION!!!!///
+
+  // var duration = 500;
+
+  // this.transition(
+  //   this.fromRoute('emberconf.speakers'),
+  //   this.toRoute('emberconf.speaker'),
+  //   this.use('explode', {
+  //     matchBy: 'data-speaker-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toLeft', { duration } ]
+  //   }),
+  //   this.reverse('explode', {
+  //     matchBy: 'data-speaker-id',
+  //     use: ['flyTo', { duration } ]
+  //   }, {
+  //     use: ['toRight', { duration } ]
+  //   })
+  // );
   }

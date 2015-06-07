@@ -117,7 +117,7 @@ Router.map(function() {
   // this.route('collaboration-modules', function(){});
   this.route('gallery', function(){});
   this.route('sandbox', function(){
-    this.route('templates')
+    this.route('templates');
     this.route('plugins');
   });
   this.route('lost-grid', function() {

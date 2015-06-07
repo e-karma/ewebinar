@@ -1,42 +1,59 @@
+
 <div class="parent">
-  {{#link-to 'why' class="child"}}
+  <!-- {{#link-to 'why' class="child"}}
   <div class="r1"></div>
   <div class="overlay">
+    <h1>Why eWebdesign.co?</h1>
+  </div>
+  {{/link-to}} -->
+
+  {{#link-to 'why' class="child"}}
+  <div class="overlay" data-logo-id="r3">
     <h1>Why eWebdesign.co?</h1>
   </div>
   {{/link-to}}
 
   {{#link-to 'platform' class="child"}}
-  <div class="r2"></div>
-  <div class="overlay">
+  <div class="r2" data-logo-id="r2"></div>
     <h1>Platform</h1>
-  </div>
+    <!-- <div class="overlay">
+</div> -->
   {{/link-to}}
 
   {{#link-to 'store' class="child"}}
-  <div class="r4"></div>
+  <div class="r4" data-logo-id="r4"></div>
   <div class="overlay">
     <h1>Store</h1>
   </div>
   {{/link-to}}
   {{#link-to 'custom-services' class="child"}}
-  <div class="r5"></div>
+  <div class="r5" data-logo-id="r5"></div>
   <div class="overlay">
     <h1>Custom Services</h1>
   </div>
   {{/link-to}}
   {{#link-to 'roadmap' class="child"}}
-  <div class="r3"></div>
+  <div class="r3" data-logo-id="r1"></div>
   <div class="overlay">
     <h1>Roadmap</h1>
   </div>
   {{/link-to}}
   {{#link-to 'next-steps' class="child"}}
-  <div class="r6"></div>
+  <div class="r6" data-logo-id="r6"></div>
   <div class="overlay">
     <h1>Next Steps</h1>
   </div>
   {{/link-to}}
+  <!-- {{#link-to 'intro' class="child"}}
+  <img class="big" src="assets/images/eweblogo.png" data-logo-id="eweb" alt="Me" />
+  {{/link-to}}
+  {{#link-to 'lost-grid' class="child"}}
+  <img class="big" src="assets/images/eweblogo.png" data-logo-id="lost-grid" alt="Me" />
+  {{/link-to}} -->
+  <!-- {{#link-to 'gallery' class="child"}}
+  <div class="full-width" data-id="gallery"></div>
+  {{/link-to}} -->
+
 </div>
 
 {{liquid-outlet}}

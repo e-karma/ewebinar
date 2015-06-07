@@ -1,15 +1,14 @@
 <header>
-  <div class="left">
-    {{#link-to 'index'}}<img class="me" src="assets/images/eweblogo.png" alt="Me" />{{/link-to}}
-  </div>
-  <div class="center">
+  <div class="third-link">
     {{#link-to 'why' class="ul1"}}Why?{{/link-to}}
-    {{#link-to 'platform' class="ul2"}}Platform{{/link-to}}
-    {{#link-to 'roadmap' class="ul3"}}Roadmap{{/link-to}}
-    {{#link-to 'next-steps' class="ul4"}}Next Steps{{/link-to}}
-
+    {{#link-to 'platform' class="ul1"}}Platform{{/link-to}}
   </div>
-  <div class="right">
+  <div class="third-header">
+    {{#link-to 'index'}}<img class="me" src="assets/images/eweblogo.png" data-logo-id="eweb" alt="Me"/>{{/link-to}}
+  </div>
+  <div class="third-link">
+    {{#link-to 'roadmap' class="ul1"}}Roadmap{{/link-to}}
+    {{#link-to 'next-steps' class="ul1"}}Next Steps{{/link-to}}
   </div>
 </header>
 {{liquid-outlet}}
