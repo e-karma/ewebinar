@@ -1,23 +1,49 @@
-<header>
-  <div class="third-link"></div>
-  <div class="third-header">
-    {{#link-to 'index'}}<img class="me" src="assets/images/eweblogo.png" data-logo-id="eweb" alt="Me"/>{{/link-to}}
-  </div>
-  <div class="third-link">
-    <div class="hamburger">
-      <div class="stroke"></div>
-      <div class="stroke"></div>
-      <div class="stroke"></div>
+<div class="container">
+  <div class="transformer {{isExpanded}}">
+    <div class="off-canvas">
+      {{#if isExpanded}}
+      <div class="hamburger" {{action 'contract'}}>
+        <div class="white-stroke"></div>
+        <div class="white-stroke"></div>
+        <div class="white-stroke"></div></div>
+      {{else}}
+      <div class="hamburger" {{action 'expand'}}>
+        <div class="white-stroke"></div>
+        <div class="white-stroke"></div>
+        <div class="white-stroke"></div></div>
+      {{/if}}
+      <ul>
+        <li>{{#link-to 'why' class="ul1"}}Why?{{/link-to}}</li>
+        <li>{{#link-to 'platform' class="ul1"}}Platform{{/link-to}}</li>
+        <li>{{#link-to 'roadmap' class="ul1"}}Roadmap{{/link-to}}</li>
+        <li>{{#link-to 'next-steps' class="ul1"}}Next Steps{{/link-to}}</li>
+      </ul>
     </div>
+    <header>
+      <div class="third-link"></div>
+      <div class="third-header">
+        {{#link-to 'index'}}<img class="me" src="assets/images/eweblogo.png" data-logo-id="eweb" alt="Me"/>{{/link-to}}
+      </div>
+      <div class="third-link">
+        {{#if isExpanded}}
+          <div {{action 'contract'}} class="hamburger">
+            <div class="stroke"></div>
+            <div class="stroke"></div>
+            <div class="stroke"></div>
+          </div>
+        {{else}}
+          <div {{action 'expand'}} class="hamburger">
+            <div class="stroke"></div>
+            <div class="stroke"></div>
+            <div class="stroke"></div>
+          </div>
+        {{/if}}
+      </div>
+    </header>
+    {{liquid-outlet}}
   </div>
-</header>
-{{liquid-outlet}}
-<!-- <aside>
-  {{#link-to 'why' class="ul1"}}Why?{{/link-to}}
-  {{#link-to 'platform' class="ul1"}}Platform{{/link-to}}
-  {{#link-to 'roadmap' class="ul1"}}Roadmap{{/link-to}}
-  {{#link-to 'next-steps' class="ul1"}}Next Steps{{/link-to}}
-</aside> -->
+</div>
+
 <!-- <footer>
   <div class="row">
     <div class="third">
