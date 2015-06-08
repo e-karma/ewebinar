@@ -181,7 +181,7 @@ section {
   opacity: .8!important;
   width: 100%;
   min-height: 300px;
-  z-index:1;
+  z-index:10;
   :hover {
       opacity: .65;
   }
@@ -199,7 +199,24 @@ section {
   opacity: .8!important;
   width: 100%;
   min-height: 200px;
-  z-index:1;
+  z-index:10;
+  :hover {
+      opacity: .65;
+  }
+  h2{
+    color:white;
+    text-align:center;
+    padding-top:15%;
+  }
+}
+.overlay-black {
+  position:absolute;
+  top:0;
+  left:0;
+  background: $black!important;
+  width: 100%;
+  min-height: 200px;
+  z-index:10;
   :hover {
       opacity: .65;
   }
@@ -217,7 +234,7 @@ section {
 /*   opacity: .8!important;
  */  width: 100%;
   min-height: 100px;
-  z-index:1;
+  z-index:10;
   :hover {
       opacity: .65;
   }
@@ -235,7 +252,7 @@ section {
   opacity: .8!important;
   width: 100%;
   min-height: 100px;
-  z-index:1;
+  z-index:10;
   :hover {
       opacity: .65;
   }
@@ -245,6 +262,17 @@ section {
     padding-top:15%;
   }
 }
+
+.overlay {
+  color:blue;
+  background:white;
+  z-index:10;
+}
+
+.liquid-child {
+  opacity:1;
+}
+
 .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9 {
   background-image: url(images/sprite.jpg);
   background-repeat: no-repeat;
@@ -325,7 +353,7 @@ section {
   width:100%;
 }
 
-.dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog-sm, .blog-lg, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3, .analytics1, .builder1, .msg1, .msg2, .content1, .event1, .profile-sm, .profile-lg  {
+.dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog-sm, .blog-lg, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3, .analytics1, .builder1, .msg1, .msg2, .content1, .content2, .event1, .profile-sm, .profile-lg  {
   background-image: url(images/eweb-sm-sprite.jpg);
   background-repeat: no-repeat;
   height:200px;
@@ -333,6 +361,7 @@ section {
 }
 .dash1{
   background-position: -80px -5560px;
+  z-index:-1!important;
 }
 
 .dash2{
@@ -361,6 +390,13 @@ section {
 .cal1{
   background-position: -1600px -19900px;
 }
+.crm1{
+  background-position: -420px -300px;
+}
+.crm2{
+  background-position: -450px -700px;
+}
+
 .todo1{
   background-position: -1630px -20200px;
 }
@@ -381,7 +417,10 @@ section {
   background-position: -1660px -19530px;
 }
 .content1{
-  background-position: 0px -19460px;
+  background-position: -70px -5580px;
+}
+.content2{
+  background-position: -140px -6500px;
 }
 
 .eweb-logo-big{
@@ -398,13 +437,19 @@ section {
 .bgmtn {
   background-position: 0px -4000px;
 }
-
 .bg2 {
   background-position: 20px -11350px;
+}
+.liquid-child > .bg2 {
+  z-index:0;
+  .overlay {
+    z-index:2!important;
+  }
 }
 
 .bg3 {
   background-position: -200px -7500px;
+  z-index:0;
 }
 .bg4{
   background-position: -90px -3090px;
@@ -547,8 +592,8 @@ div {
     font-weight: 300;
     text-align:center;
     padding-top: 5%;
-    z-index:1001;
-   }
+    z-index:10;
+  }
 }
 
 .liquid-container {
@@ -569,7 +614,7 @@ div {
   min-height:100px;
   width:100%;
   background:yellow;
-  z-index:1000;
+  z-index:10;
 
 }
 
@@ -919,6 +964,11 @@ a {
   margin:5px auto;
 }
 
+.overlay h2 {
+  padding-top:1.2%;
+  font-size:4vw;
+}
+
 @media (--sm-mobile){
   h1{
     font-size:5.9vw;
@@ -945,10 +995,7 @@ a {
     height:100px;
   }
 
-  .overlay h2 {
-    padding-top:5%;
-    font-size:4vw;
-  }
+
   .ul3,.ul4, .ul5 {
     visibility:hidden;
   }
@@ -1008,9 +1055,7 @@ a {
     height:100px;
   }
 
-  .overlay h2 {
-    padding-top:1.2%;
-  }
+
   .ul5 {
     visibility:hidden;
   }
@@ -1035,9 +1080,6 @@ a {
     margin-bottom:5px;
   }
 
-  .overlay h2 {
-    padding-top:1.2%;
-  }
 }
 @media (--sm-desktop){
   h1{
@@ -1059,10 +1101,6 @@ a {
     height:200px;
     margin-bottom:5px;
   }
-
-  .overlay h2 {
-    padding-top:1.2%;
-  }
 }
 @media (--lg-desktop){
   h1{
@@ -1082,10 +1120,6 @@ a {
     lost-column: 1/4;
     height:200px;
     margin-bottom:5px;
-  }
-
-  .overlay h2 {
-    padding-top:1.2%;
   }
 }
 .slideUp{
