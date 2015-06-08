@@ -43,12 +43,12 @@ h6 {
 }
 
 ul {
-  margin:0;
+  margin-top:75px;
 }
 li {
   list-style: none;
   display: list-item;
-  margin: 5px auto;
+  margin: 20px auto;
 }
 a {
   border-bottom: 1px solid #ddd;
@@ -56,32 +56,7 @@ a {
   text-decoration: none;
 }
 
-/* a {
-  box-shadow: 0px 8px 17px rgba(0,0,0,.2);
-} */
 
-aside {
-  width:15%;
-  float:left;
-  visibility:invisible;
-  ul {
-    margin:0;
-    li {
-      list-style-type:none;
-    }
-  }
-}
-
-main {
-  float:right;
-  width:100%;
-  height:auto;
-  background:purple;
-  h1{
-    text-align:center;
-    color:white;
-  }
-}
 
 img.me {
   padding: 10px;
@@ -131,35 +106,39 @@ section {
 
 }
 
-body {
-/*   -webkit-backface-visibility:hidden;
-transform: translate3d(260px, 0, 0); */
-}
+
+/* OFFCANVAS BEGINS HERE!!*/
+/* OFFCANVAS BEGINS HERE!!*/
+
 .container {
   overflow: hidden;
 }
 
 .off-canvas {
   position: absolute;
-  width: 260px;
-  left: -260px;
+  width: 140px;
+  left: -140px;
   top: 0;
   bottom: 0;
   background:$black;
+  box-shadow: 0px 8px 17px rgba(0,0,0,.2);
 }
 .transformer {
   max-width:100%;
   margin:auto;
   transition: transform 0.3s ease;
   &.is-open {
-    transform: translate3d(260px, 0, 0);
+    transform: translate3d(140px, 0, 0);
   }
 }
-.hamburger {
-  position:absolute;
+.hamburger-left {
+  text-align:center;
+  margin:1.2em auto;
+}
+.hamburger-right{
+  padding:1em;
   float:right;
-  top:0px;
-  right:0px;
+  vertical-align: middle;
 }
 
 .third{
@@ -170,6 +149,14 @@ transform: translate3d(260px, 0, 0); */
     color:$black;
   }
 }
+
+
+/* OFFCANVAS BEGINS HERE!!*/
+/* OFFCANVAS BEGINS HERE!!*/
+
+
+
+
 .full-page {
   width:100%;
   min-height:100px;
@@ -423,11 +410,6 @@ transform: translate3d(260px, 0, 0); */
   height:200px;
   width:100%;
   z-index:-1;
-}
-
-.hamburger {
-  float:right;
-  margin:1.2em;
 }
 .stroke, .white-stroke {
   border-bottom:3px solid #151515;

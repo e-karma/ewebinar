@@ -2,12 +2,12 @@
   <div class="transformer {{isExpanded}}">
     <div class="off-canvas">
       {{#if isExpanded}}
-      <div class="hamburger" {{action 'contract'}}>
+      <div class="hamburger-left" {{action 'contract'}}>
         <div class="white-stroke"></div>
         <div class="white-stroke"></div>
         <div class="white-stroke"></div></div>
       {{else}}
-      <div class="hamburger" {{action 'expand'}}>
+      <div class="hamburger-left" {{action 'expand'}}>
         <div class="white-stroke"></div>
         <div class="white-stroke"></div>
         <div class="white-stroke"></div></div>
@@ -26,13 +26,13 @@
       </div>
       <div class="third-link">
         {{#if isExpanded}}
-          <div {{action 'contract'}} class="hamburger">
+          <div {{action 'contract'}} class="hamburger-right">
             <div class="stroke"></div>
             <div class="stroke"></div>
             <div class="stroke"></div>
           </div>
         {{else}}
-          <div {{action 'expand'}} class="hamburger">
+          <div {{action 'expand'}} class="hamburger-right">
             <div class="stroke"></div>
             <div class="stroke"></div>
             <div class="stroke"></div>
