@@ -519,7 +519,6 @@ div {
     color: white;
     font-weight: 300;
     text-align:center;
-    padding-top: 5%;
     z-index:10;
   }
 }
@@ -541,8 +540,8 @@ div {
 .full-width {
   min-height:100px;
   width:100%;
-  background:yellow;
   z-index:10;
+  background:#151515;
 
 }
 
