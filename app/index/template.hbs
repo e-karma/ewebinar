@@ -2,53 +2,59 @@
 <div class="parent">
   <!-- {{#link-to 'why' class="child"}}
   <div class="r1"></div>
-  <div class="overlay">
-    <h1>Why eWebdesign.co?</h1>
+  <div>
+    <h1 class="green">Why eWebdesign.co?</h1>
   </div>
   {{/link-to}} -->
 
-  {{#link-to 'why' class="child"}}
-  <div class="bg1">
-    <div data-logo-id="r3" class="overlay">
-      <h1>Why eWebdesign.co?</h1>
+  {{#link-to 'why' class="child black"}}
+    <div data-logo-id="r3">
+      {{fa-icon "dashboard"}}
+      <h1 class="green">Why eWebdesign.co?</h1>
+      <p>Some Sample Text Goes Here</p>
     </div>
+  {{/link-to}}
+
+  {{#link-to 'platform' class="child black"}}
+  <div data-logo-id="r2">
+    {{fa-icon "dashboard"}}
+    <h1 class="green">Platform</h1>
+    <p>Some Sample Text Goes Here</p>
   </div>
   {{/link-to}}
 
-  {{#link-to 'platform' class="child"}}
-  <div class="bg2"></div>
-  <div data-logo-id="r2" class="overlay">
-    <h1>Platform</h1>
+  {{#link-to 'store' class="child black"}}
+  <div data-logo-id="r4">
+    {{fa-icon "dashboard"}}
+    <h1 class="green">eCommerce Storefront</h1>
+    <p>Some Sample Text Goes Here</p>
   </div>
-    <!-- <div class="overlay">
-</div> -->
   {{/link-to}}
 
-  {{#link-to 'store' class="child"}}
-  <div class="bg4"></div>
-  <div data-logo-id="r4" class="overlay">
-    <h1>eCommerce Storefront</h1>
+  {{#link-to 'custom-services' class="child black"}}
+  <div data-logo-id="r5">
+    {{fa-icon "dashboard"}}
+    <h1 class="green">Custom Services</h1>
+    <p>Some Sample Text Goes Here</p>
   </div>
   {{/link-to}}
-  {{#link-to 'custom-services' class="child"}}
-  <div class="bg5"></div>
-  <div data-logo-id="r5" class="overlay">
-    <h1>Custom Services</h1>
+
+  {{#link-to 'roadmap' class="child black"}}
+  <div data-logo-id="r1">
+    {{fa-icon "dashboard"}}
+    <h1 class="green">Roadmap</h1>
+    <p>Some Sample Text Goes Here</p>
   </div>
   {{/link-to}}
-  {{#link-to 'roadmap' class="child"}}
-  <div class="bg3"></div>
-  <div data-logo-id="r1" class="overlay">
-    <h1>Roadmap</h1>
+
+  {{#link-to 'next-steps' class="child black"}}
+  <div data-logo-id="r6">
+    {{fa-icon "dashboard"}}
+    <h1 class="green">Next Steps</h1>
+    <p>Some Sample Text Goes Here</p>
   </div>
   {{/link-to}}
-  {{#link-to 'next-steps' class="child"}}
-  <div class="bg6"></div>
-  <div data-logo-id="r6" class="overlay">
-    <h1>Next Steps</h1>
-  </div>
-  {{/link-to}}
-  <!-- {{#link-to 'intro' class="child"}}
+  <!-- {{#link-to 'intro' class="child black"}}
   <img class="big" src="assets/images/eweblogo.png" data-logo-id="eweb" alt="Me" />
   {{/link-to}}
   {{#link-to 'lost-grid' class="child"}}
