@@ -165,9 +165,12 @@ section {
   margin-bottom:5px;
   opacity:.9;
 }
+
 .black {
   text-align:center;
   color: #151515;
+  background: #151515;
+  height:400px;
 }
 .parent {
   height:100%;
@@ -317,7 +320,7 @@ section {
 .xs-10 {background-position: 0px -1500px;}
 .xs-11 {background-position: 0px -2200px;}
 .xs-12 {background-position: 0px -3050px;}
-/*
+
 
 .r1, .r2, .r3, .r4, .r5, .r6, .r7, .r8, .r9 {
   background-image: url(images/sprite.jpg);
@@ -349,14 +352,14 @@ section {
 .sm8{  background-position: -600px -1000px;}
 .sm9{  background-position: -1200px -1000px;}
 
-
-.bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7, .bg8, .bg9, .bgmtn {
-  background-image: url(images/eweb-sm-sprite.jpg);
-  background-repeat: no-repeat;
+.hero-container {
   height:200px;
-  width:100%;
 }
-
+.black-text {
+  margin: 2em 0;
+  color:#151515;
+  font-size: 3.6vw;
+}
 
 .dash1, .dash2, .dash3, .store1, .store2, .store3, .email1, .email2, .email3, .crm1, .crm2, .crm3, .profile1, .profile2, .profile3, .blog-sm, .blog-lg, .cal1, .cal2, .cal3, .todo1, .todo2, .todo3, .analytics1, .builder1, .msg1, .msg2, .mktg1, .mktg2, .dev1, .dev2, .dev3, .nw1, .nw2, .ss1, .sc1, .content1, .content2, .event1, .profile-sm, .profile-lg, .design1, .design2  {
   background-image: url(images/eweb-sm-sprite.jpg);
@@ -413,7 +416,7 @@ section {
 .bg5 { background-position: 0px -18500px;}
 .bg6{ background-position: -180px -10790px;}
 .bg7{ background-position: 0px -11000px;}
-.bg8{  background-position: 0px -12000px;} */
+.bg8{  background-position: 0px -12000px;}
 
 
 .liquid-child > .bg2 {
@@ -423,7 +426,7 @@ section {
   }
 }
 
-/* #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10 {
+ #s1, #s2, #s3, #s4, #s5, #s6, #s7, #s8, #s9, #s10 {
   background-image: url(images/estore-sprite.jpg);
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -446,7 +449,7 @@ section {
   width:100%;
   z-index:-1;
 }
- */
+
 
 
 
@@ -504,7 +507,9 @@ section {
     background: blue;
   }
 }
-
+.padding-top {
+  padding-top: 5%;
+}
 /* inner pages*/
 .content {
    h1 {
@@ -683,11 +688,7 @@ Creates a column that is a fraction of the size of its containing element's widt
   background:$black;
 }
 
-.black {
-  text-align:center;
-  color: #151515;
-  background: #151515;
-}
+
 
 
 /* LOST-FLEXBOX-GRIDS  All or nothing it appears
