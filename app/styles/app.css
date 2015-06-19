@@ -121,7 +121,7 @@ section {
   overflow: hidden;
 }
 .container-bg {
-  background:purple;
+  background:#fff;
   padding:10px;
 }
 
@@ -161,9 +161,10 @@ section {
   }
 }
 .third-footer {
-  text-align:center;
   lost-column:1/3 0;
   height:auto;
+  text-align:center;
+
 }
 
 /* OFFCANVAS BEGINS HERE!!*/
@@ -198,9 +199,22 @@ section {
   text-align:center;
   background:#909090;
   color:$black;
-  height:400px;
+  height:350px;
 }
 .gray-200 {
+  height:200px;
+}
+
+.white-square, .white-square-200 {
+  text-align:center;
+  background:#fff;
+  color:$black;
+  height:350px;
+  p {
+    color: $black;
+  }
+}
+.white-square-200 {
   height:200px;
 }
 .parent {
@@ -440,7 +454,7 @@ section {
 .sc1 {background-position: -700px -2550px;}
 .builder1 {background-position: -360px -19900px;}
 .analytics1 {background-position: -940px -19930px;}
-.msg1{ background-position: -1660px -19530px;}
+.msg1{ background-position: -1660px -19530px; margin: 0 5em;}
 .content1{ background-position: -70px -5580px;}
 .content2{ background-position: -140px -6500px;}
 .eweb-logo-big{ background-position: -380px -19380px;}
