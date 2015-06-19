@@ -347,6 +347,25 @@ export default function() {
       use: ['toRight', { duration } ]
     })
   );
+
+  this.transition(
+    this.fromRoute('why.unified-platform'),
+    this.toRoute('why.efficiency'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('why.efficiency'),
+    this.toRoute('why.cutting-edge-features'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('why.cutting-edge-features'),
+    this.toRoute('platform.index'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
   this.transition(
     this.fromRoute('platform.index'),
     this.toRoute('platform.dashboard'),
@@ -561,8 +580,8 @@ export default function() {
   this.transition(
     this.fromRoute('platform.crm'),
     this.toRoute('platform.profile'),
-    this.use('toRight'),
-    this.reverse('toLeft')
+    this.use('toDown'),
+    this.reverse('toUp')
   );
 
   /* Route 4 */
@@ -588,12 +607,24 @@ export default function() {
   this.transition(
     this.fromRoute('platform.todos'),
     this.toRoute('platform.builder'),
-    this.use('toLeft'),
-    this.reverse('toRight')
+    this.use('toUp'),
+    this.reverse('toDown')
   );
   this.transition(
     this.fromRoute('platform.builder'),
     this.toRoute('platform.analytics'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('platform.blog'),
+    this.toRoute('platform.calendar-events'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
+  this.transition(
+    this.fromRoute('platform.calendar-events'),
+    this.toRoute('platform.todos'),
     this.use('toLeft'),
     this.reverse('toRight')
   );
@@ -605,13 +636,19 @@ export default function() {
   );
 
 
+  this.transition(
+    this.fromRoute('platform.messenger'),
+    this.toRoute('store.index'),
+    this.use('toUp'),
+    this.reverse('toDown')
+  );
 
   this.transition(
     this.fromRoute('custom-services'),
     this.toRoute('custom-services.design'),
     this.use('toLeft'),
     this.reverse('toRight')
-  ),
+  );
 
   /* Route 9 */
   this.transition(
@@ -619,19 +656,19 @@ export default function() {
     this.toRoute('why'),
     this.use('toLeft'),
     this.reverse('toRight')
-  ),
+  );
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('platform'),
     this.use('toLeft'),
     this.reverse('toRight')
-  ),
+  );
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('roadmap'),
     this.use('toLeft'),
     this.reverse('toRight')
-  ),
+  );
   this.transition(
     this.fromRoute('next-steps'),
     this.toRoute('store'),
