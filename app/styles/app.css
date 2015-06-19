@@ -181,7 +181,7 @@ section {
   margin:0;
 }
 
-.child, .child-150 {
+.child, .child-150, .child-250 {
   position:relative;
   lost-waffle: 1/3;
   height: 400px;
@@ -190,6 +190,9 @@ section {
 }
 .child-150 {
   height:150px;
+}
+.child-250 {
+  height:250px;
 }
 .child-cal {
   position:relative;
