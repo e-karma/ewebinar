@@ -170,12 +170,16 @@ section {
   opacity:.9;
 }
 
-.black {
+.black, .black-250 {
   text-align:center;
   color: #151515;
   background: #151515;
   height:400px;
 }
+.black-250 {
+  height:250px;
+}
+
 .parent {
   height:100%;
   margin:0;
