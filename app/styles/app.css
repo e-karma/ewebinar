@@ -115,6 +115,10 @@ section {
 .container {
   overflow: hidden;
 }
+.container-bg {
+  background:purple;
+  padding:10px;
+}
 
 .off-canvas {
   position: absolute;
@@ -177,12 +181,15 @@ section {
   margin:0;
 }
 
-.child {
+.child, .child-150 {
   position:relative;
   lost-waffle: 1/3;
   height: 400px;
   margin-bottom:5px;
   box-shadow: 0px 8px 17px rgba(0,0,0,.2);
+}
+.child-150 {
+  height:150px;
 }
 .child-cal {
   position:relative;
@@ -521,7 +528,6 @@ section {
 /* overlay text*/
 div {
   h1 {
-    color: white;
     font-weight: 300;
     text-align:center;
     z-index:10;
@@ -849,18 +855,22 @@ Nesting is simple and requires no extra context unlike other preprocessor grid s
   height:300px;
 }
 .nest-parent{
-  lost-column:1/2;
-  height:500px;
+  lost-column:1;
+  height:auto;
   h1{
-    color:white;
     text-align:center;
   }
 }
-.child-nest-third{
+.child-nest-third, .child-nest-5{
   lost-column:1/3;
   background:$black;
+  margin-bottom:5px;
   height:200px;
 }
+.child-nest-5 {
+  lost-column: 1/4;
+}
+
 .child-nest-a{
   lost-column:1/2;
   background:white;
